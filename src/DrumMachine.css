@@ -1,0 +1,49 @@
+.drumMachine{
+  border:1px solid black;
+  height:400px;
+  width:800px;
+  margin: 40px auto;
+  display:grid;
+  grid-template-columns:1fr 1fr
+}
+
+.display{
+  display:grid;
+  grid-column:2/3;
+  border:1px solid red;
+}
+
+.DrumPad{
+  display:grid;
+  grid-column:1/2;
+  border:1px solid blue;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  grid-template-areas:
+  "Q W E"
+  "A S D"
+  "Z X C"
+}
+
+.pad{
+  place-self:center;
+  padding:45px;
+}
+
+.Q{grid-area:Q;}
+
+.W{grid-area:W;}
+
+.E{grid-area:E;}
+
+.A{grid-area:A;}
+
+.S{grid-area:S;}
+
+.D{grid-area:D;}
+
+.Z{grid-area:Z;}
+
+.X{grid-area:X;}
+
+.C{grid-area:C;}

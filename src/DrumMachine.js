@@ -7,7 +7,7 @@ class DrumMachine extends Component{
   constructor(props){
     super(props);
     this.state={
-      sound:''
+      sound:' '
     }
     this.setDisplay=this.setDisplay.bind(this);
   }
@@ -15,6 +15,42 @@ class DrumMachine extends Component{
   setDisplay(newDisplay){
     this.setState({
       sound:newDisplay
+    });
+  }
+
+  componentWillMount(){
+    window.addEventListener('keypress',(e)=>{
+      switch(e.key){
+        case 'q':
+          document.getElementById("Q").click();
+          break;
+        case 'w':
+          document.getElementById("W").click();
+          break;
+        case 'e':
+          document.getElementById("E").click();
+          break;
+        case 'a':
+          document.getElementById('A').click();
+          break;
+        case 's':
+          document.getElementById("S").click();
+          break;
+        case 'd':
+          document.getElementById('D').click();
+          break;
+        case 'z':
+          document.getElementById('Z').click();
+          break;
+        case 'x':
+          document.getElementById("X").click();
+          break;
+        case 'c':
+          document.getElementById('C').click();
+          break;
+        default:
+          break;
+      }
     });
   }
 

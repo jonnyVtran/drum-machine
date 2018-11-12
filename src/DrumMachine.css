@@ -1,16 +1,42 @@
+body{
+  background-color: grey;
+}
+
 .drumMachine{
-  border:1px solid black;
   height:400px;
   width:800px;
-  margin: 40px auto;
+  margin: 0 auto;
   display:grid;
-  grid-template-columns:1fr 1fr
+  grid-template-columns:1fr 1fr;
 }
 
 .display{
   display:grid;
   grid-column:2/3;
   border:1px solid red;
+  background-color: #151515;
+  border-radius: 0 0 10px 0;
+}
+
+h1{
+  width:798px;
+  margin: 100px auto 0 auto;
+  color:white;
+  background-color:#151515;
+  padding:35px 0;
+  border: 1px solid #cd00cd;
+  border-radius: 10px 10px 0 0;
+}
+
+p{
+  border: 1px solid purple;
+  width: 200px;
+  height:40px;
+  margin:25% auto auto auto;
+  font-size:24px;
+  padding:10px;
+  color:white;
+  background-color: #737373;
 }
 
 .DrumPad{
@@ -22,12 +48,33 @@
   grid-template-areas:
   "Q W E"
   "A S D"
-  "Z X C"
+  "Z X C";
+  background-color: #151515;
+  border-radius: 0 0 0 10px;
 }
 
 .pad{
   place-self:center;
   padding:45px;
+  background-color: #2a2a2a;
+  color:white;
+  border: 1px solid red;
+  border-radius: 10px 0 10px 0;
+  box-shadow: 4px 4px black;
+}
+
+.pad:hover{
+  box-shadow: 3px 3px black;
+  transform:translate(1px, 1px);
+}
+
+.pad:active{
+  transform:translate(3px,3px);
+  box-shadow:1px 1px black;
+}
+
+.pad:focus{
+  outline:none;
 }
 
 .Q{grid-area:Q;}
